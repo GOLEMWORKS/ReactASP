@@ -1,8 +1,14 @@
+using SimpleSPAReact.Data;
+using SimpleSPAReact.Services;
+using SimpleSPAReact.Services.Interfaces;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllersWithViews();
+builder.Services.AddTransient<IPostService, PostService>();
+builder.Services.AddSingleton<MyDataContext>();
 
 var app = builder.Build();
 
