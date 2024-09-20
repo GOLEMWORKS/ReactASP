@@ -23,6 +23,7 @@ const Posts = () => {
         const headerFromUser = document.querySelector('#header').value;
         const textFromUser = document.querySelector('#text').value;
 
+        // Формирование поста
         const newPost = {
             header: headerFromUser,
             text: textFromUser
